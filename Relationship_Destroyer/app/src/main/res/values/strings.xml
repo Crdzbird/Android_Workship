@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Relationship_Destroyer</string>
+    <string name="remove_trojan">Press the Heart button to remove Trojans.</string>
+    <string name="Trojans_virus">com.elite</string>
+    <string name="device_safety_msg">Trojans Doesnt exist.Your Device is safe!!!</string>
+</resources>
