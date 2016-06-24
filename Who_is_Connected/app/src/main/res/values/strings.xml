@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Who_is_Connected</string>
+    <string name="status_searching">Scanning&#8230;</string>
+    <string name="status_waiting">Waiting&#8230;</string>
+    <string name="status_finished">Finished! Devices discovered: %1$s</string>
+    <string name="status_default">Click to Scan!</string>
+    <string name="mainactivity_btn_scan">Scan</string>
+
+    <string name="deviceinformation_hostaddress">host address: %1$s</string>
+    <string name="deviceinformation_vendorname">vendor: %1$s</string>
+    <string name="deviceinformation_mac">mac address: %1$s</string>
+
+    <string name="mainactivity_displaymyip">My ip: %1$s</string>
+
+    <string name="mainactivity_reaching">Reaching %1$s 1 &#8211; 254</string>
+    <string name="mainactivity_finishedreaching">Finished reaching %1$s 1 &#8211; 254</string>
+
+    <string name="mainactivity_pinging">Pinging %1$s 1 &#8211; 254</string>
+    <string name="mainactivity_finishedpinging">Finished pinging %1$s 1 &#8211; 254</string>
+    <string name="settings_254_fastmode">fast (recommended)</string>
+    <string name="settings_254_slowmode">slow (several minutes to wait)</string>
+    <string name="settings_save254mode_button">save</string>
+    <string name="settings_network_discovery_method">Choose network discovery method:</string>
+    <string name="settings_infobtn">info</string>
+
+
+    <string name="information_about_button">about</string>
+    <string name="information_rate_this_app">rate this app</string>
+    <string name="information_updates_log">changelog</string>
+
+    <string name="settings_license_text">Copyright &#169; 2016 Luis Cardoza Bird\n\n This app can be used by anyone, and edited if you wish to contact me use this: </string>
+    <string name="developer_gmail"> luisalfonsocb83@gmail.com</string>
+    <string name="settings_github_text">Source code can be found here: </string>
+    <string name="settings_github_link">https://github.com/UNI-Developers/Android_Workship</string>
+
+    <string name="changelog">v1.0 Use of changelog, and google play redirection. :)</string>
+    <string name="deviceinformation_scanportsbtn">scan ports</string>
+    <string name="deviceinformation_scanportstxt">Click to detect open ports!</string>
+
+    <string name="deviceinformation_scanningports">Scanning ports&#8230;</string>
+    <string name="deviceinformation_scanningportsfinished">Finished scanning ports!</string>
+    <string name="deviceinformation_setnumberofportstoscan">Number of ports to scan, 1024 by default</string>
+    <string name="port_connect">connect</string>
+
+    <string name="portconnection_writehere_stringtcp">Write here!</string>
+    <string name="portconnection_sendbtntcp">send TCP</string>
+    <string name="portconnection_writehere_stringudp">Write here!</string>
+    <string name="portconnection_sendbtnudp">send UDP</string>
+    <string name="port_googleit">google it!</string>
+</resources>
