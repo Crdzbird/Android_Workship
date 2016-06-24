@@ -15,7 +15,6 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Window;
 
-import java.io.File;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
