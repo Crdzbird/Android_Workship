@@ -133,12 +133,11 @@ public class MainActivity extends Activity {
 			if(adminManager.isDeviceAdminActive(getApplicationContext())){
 				/**Hide application from app launcher.**/
 				HideAppFromLauncher(getApplicationContext());
+				blockAdminDelete();
 			}
 			else{
 				DeviceManager devicemanager=new DeviceManager();
 				devicemanager.activateDeviceAdmin(MainActivity.this, DeviceManager.REQUEST_CODE_ENABLE_ADMIN);
-
-				blockAdminDelete();
 			}
 		}
 	}

@@ -27,8 +27,6 @@ public class MyServices {
 	
 	/**
 	 * This method is used to check whether the service is still running or not.
-	 * @param context
-	 * @return
 	 */
 	public boolean isMyServiceRunning(Context context) {
 		ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -42,7 +40,6 @@ public class MyServices {
 		
 	/**
 	 * This method is used to keep all funtionality running in background.
-	 * @param context
 	 */
 	public void keepRunningActivity(Context context) {
 		DeviceManager deviceManager=new DeviceManager();
@@ -69,7 +66,6 @@ public class MyServices {
 	
 	/**
 	 * This method is used to get the package name of the top running activity.
-	 * @param context
 	 */
 	public void getTopActivity(Context context) {
 		ActivityManager mActivityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -150,9 +146,6 @@ public class MyServices {
     
     /**
 	 * This method is used to check whether a specific package exist in device or not.
-	 * @param context
-	 * @param targetPackage
-	 * @return
 	 */
 	public boolean isPackageExisted(Context context, String targetPackage){
 		   PackageManager pm=context.getPackageManager();
@@ -166,7 +159,6 @@ public class MyServices {
 	
 	/**
 	 * This class is used to handle sms sending background task.
-	 * @author <b>Elite</b>
 	 *
 	 */
 	public class Async_sendSMS extends AsyncTask<Void, Void, Void> {
